@@ -1,0 +1,26 @@
+<div class="d-flex gap-3 pt-xl-5 flex-column flex-xl-row style-wrapper px-xl-5">
+    <div class="d-flex flex-column col-12 col-xl-7">
+        <app-map style="height: 100%;" [selectedIndex]="selectedCardIndex"></app-map>
+    </div>
+
+    <div class="d-flex flex-column col-12 col-xl-5 gap-3">
+        <div class="col-12 col-sm-6 col-md-4 col-xl-6 p-0 ms-sm-auto">
+            <div class="input-wrapper border">
+                <input [(ngModel)]="searchQuery" class="style-input" type="text" placeholder="Search">
+                <svg class="style-search-icon" width="14" height="14" viewBox="0 0 14 14" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M13 13L10.1 10.1M11.6667 6.33333C11.6667 9.27885 9.27885 11.6667 6.33333 11.6667C3.38781 11.6667 1 9.27885 1 6.33333C1 3.38781 3.38781 1 6.33333 1C9.27885 1 11.6667 3.38781 11.6667 6.33333Z"
+                        stroke="#1E1E1E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="shadow pt-3 pe-2 py-xl-4 rounded-3 widget">
+            <div class="style-widget-wrapper row m-1 pt-2 pe-2">
+                <app-widgets class="col-12 col-sm-6 col-md-4 col-xl-6 mb-4" *ngFor="let d of mapData; let i = index"
+                    (cardClicked)="onClickedCard(i)" [isSelected]="selectedCardIndex === i" [widgetData]="d"></app-widgets>
+            </div>
+        </div>
+    </div>
+</div>

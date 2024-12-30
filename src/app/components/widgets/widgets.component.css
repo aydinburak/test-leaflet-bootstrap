@@ -1,0 +1,17 @@
+:host {
+  display: block;
+}
+
+
+
+.style-card {
+  background-color: #F2F9FF;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.style-card.selected {
+  outline: 2px solid #007DFC;
+}

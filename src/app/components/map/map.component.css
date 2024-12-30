@@ -1,0 +1,17 @@
+:host {
+  display: block;
+}
+
+::ng-deep .leaflet-marker-icon {
+  z-index: 9999;
+}
+
+::ng-deep .leaflet.popup.content {
+  margin-left: 0 !important;
+  min-width: 300px;
+  font-family: 'Poppins' !important;
+}
+
+::ng-deep .leaflet-popup-tip-container {
+  display: none;
+}
